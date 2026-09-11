@@ -1,0 +1,14 @@
+#Command to Connect AWS Instancse
+$ sudo dnf update -y
+$ sudo dnf install httpd -y
+$ sudo systemctl start httpd
+$ sudo systemctl enable httpd
+
+Command Promt Local Machine
+scp -i Demo5.pem -r farm-landing-page-master ec2-user@13.61.148.133:/home/ec2-user/
+
+#Command to Connect AWS Instancse
+$ sudo chmod -R 755 /var/www/html
+$ sudo cp -r /home/ec2-user/farm-landing-page-master/* /var/www/html/
+$ sudo chmod -R 755 /var/www/html
+$ ls /var/www/html/assets
